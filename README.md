@@ -12,3 +12,6 @@ We encourage your contributions to this repository as a student!
 
 - Django
   - [Checklist for deploying a Django app to Heroku](articles/deploy-django-to-heroku.md)
+
+- Resources
+  - [What coding podcasts should I check out?](articles/podcasts.md)
