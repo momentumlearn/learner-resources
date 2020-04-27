@@ -6,6 +6,9 @@ We encourage your contributions to this repository as a student!
 
 ## Contents
 
+- Meta
+  - [How do I contribute to this knowledge base?](articles/contributing.md)
+
 - Getting ready for class
   - [How to set up your computer](articles/setup.md)
   - [How we work remotely](articles/working-remotely.md)
