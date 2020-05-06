@@ -10,6 +10,7 @@ We encourage your contributions to this repository as a student!
   - [How do I contribute to this knowledge base?](articles/contributing.md)
 
 - Getting ready for class
+  - [Getting ready without Foundations](articles/getting-ready.md)
   - [How to set up your computer](articles/setup.md)
   - [How we work remotely](articles/working-remotely.md)
 
