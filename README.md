@@ -14,6 +14,9 @@ We encourage your contributions to this repository as a student!
   - [How to set up your computer](articles/setup.md)
   - [How we work remotely](articles/working-remotely.md)
 
+- JavaScript
+  - [What is `this`?](articles/this-js.md)
+
 - Django
   - [Checklist for deploying a Django app to Heroku](articles/deploy-django-to-heroku.md)
 
