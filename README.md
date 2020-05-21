@@ -17,6 +17,9 @@ We encourage your contributions to this repository as a student!
 - JavaScript
   - [What is `this`?](articles/this-js.md)
 
+- Python
+  - [What does `if __name__ == "__main__"` do?](articles/pymain.md)
+
 - Django
   - [Checklist for deploying a Django app to Heroku](articles/deploy-django-to-heroku.md)
 
