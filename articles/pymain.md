@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
 That last bit with `if __name__ == "__main__"` is pretty confusing. Here's what's going on.
 
-**Simplest version**: That's the code that will run when you run that Python script on the command line.
+*Simplest version*: That's the code that will run when you run that Python script on the command line.
 
 When Python runs, it defines some special variables. `__name__` is one of these, along with others like `__file__`. `__name__` is the name of the currently running _module_. A Python module is the set of Python code in one file.
 
@@ -111,4 +111,4 @@ __name__ = dice     # <------ look at this
 
 I put two comments in there to point out what to look at. In the first example, where we run dice.py directly, it lets us know that `__name__` equals "__main__" and the code under `if __name__ == "__main__"` run. In the second, we start the Python shell and import dice. It lets us know that `__name__` is equal to "dice", and the code under `if __name__ == "__main__"` does not run.
 
-**In conclusion**, the code under the if statement `if __name__ == "__main__"` will only run when the Python file is run directly from the command line.
+*In conclusion*, the code under the if statement `if __name__ == "__main__"` will only run when the Python file is run directly from the command line.
