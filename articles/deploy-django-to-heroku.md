@@ -6,7 +6,7 @@
 
 * Add heroku remote to your Git repository: `heroku git:remote -a <app-name>`
 
-* Install psycopg2 in your Django app: `pipenv install psycopg2`
+* Install psycopg2 in your Django app: `poetry add psycopg2`
 
     * If you have an error saying PostgreSQL cannot be found, run `brew install postgresql`
 
@@ -14,7 +14,7 @@
 
     * If you get an error that’s a big wall of text with `lssl` somewhere toward the bottom, run `brew info openssl` and then run the commands that it tells you to.
 
-* Install django-heroku in your Django app: `pipenv install django-heroku`
+* Install django-heroku in your Django app: `poetry add django-heroku`
 
 * Add django-heroku to your settings.py. At the bottom of settings.py, add
 
@@ -26,7 +26,7 @@ django_heroku.settings(locals())
 
 * Commit your code after adding django-heroku.
 
-* Install gunicorn in your Django app: `pipenv install gunicorn`.
+* Install gunicorn in your Django app: `poetry add gunicorn`.
 
 * Add a new file called Procfile:
 
@@ -50,6 +50,14 @@ web: gunicorn <project_dir>.wsgi
 
 ```py
 SECRET_KEY = os.getenv('SECRET_KEY', '<old-secret-key>')
+```
+
+* Set up the Poetry buildpack for Heroku:
+
+```
+heroku buildpacks:clear
+heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
+heroku buildpacks:add heroku/python
 ```
 
 * Commit your code and push to Heroku.
