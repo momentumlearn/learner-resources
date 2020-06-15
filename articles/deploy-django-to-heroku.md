@@ -64,12 +64,15 @@ SECRET_KEY = os.getenv('SECRET_KEY', '<old-secret-key>')
 
 * Commit your code and push to Heroku.
 
-    * Once you are sure your app works, turn off DEBUG on Heroku.
+
+* Once you are sure your app works, turn off DEBUG on Heroku.
+
+* *Only do the following if you are not using the project template*
 
 To turn off DEBUG, replace "DEBUG = True" in your settings.py with:
 
 ```py
-in_production = bool(os.getenv('PRODUCTION'))
+in_production = bool(os.getenv('DEBUG'))
 DEBUG = not in_production
 ```
 
