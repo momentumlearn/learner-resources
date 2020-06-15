@@ -36,6 +36,15 @@ web: gunicorn <project_dir>.wsgi
 
 * Commit your code after adding gunicorn and a Procfile.
 
+
+* Set up the Poetry buildpack for Heroku:
+
+```
+heroku buildpacks:clear
+heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
+heroku buildpacks:add heroku/python
+```
+
 * Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
 
 * Push to Heroku: `git push heroku master`. You will likely have a failure the first time. Debug.
@@ -52,13 +61,6 @@ web: gunicorn <project_dir>.wsgi
 SECRET_KEY = os.getenv('SECRET_KEY', '<old-secret-key>')
 ```
 
-* Set up the Poetry buildpack for Heroku:
-
-```
-heroku buildpacks:clear
-heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
-heroku buildpacks:add heroku/python
-```
 
 * Commit your code and push to Heroku.
 
