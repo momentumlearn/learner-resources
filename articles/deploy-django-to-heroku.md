@@ -47,7 +47,7 @@ heroku buildpacks:add heroku/python
 
 * Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
 
-* Push to Heroku: `git push heroku master`. You will likely have a failure the first time. Debug.
+* Push to Heroku: `git push heroku <your-git-branch>:master`. You will likely have a failure the first time. Debug.
 
 * Run migrations on Heroku: `heroku run python3 manage.py migrate`
 
