@@ -46,7 +46,7 @@ heroku buildpacks:add heroku/python
 ```
 
 * Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
-
+* Make sure your version of Python in `pyproject.toml` is set to an exact version.
 * Push to Heroku: `git push heroku <your-git-branch>:master`. You will likely have a failure the first time. Debug.
 
 * Run migrations on Heroku: `heroku run python3 manage.py migrate`
