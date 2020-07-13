@@ -1,22 +1,22 @@
-# Deploying a Django app to Heroku
+# Deploying a Django app (built with our project template) to Heroku
 
-* Create new app at [https://dashboard.heroku.com/new-app](https://dashboard.heroku.com/new-app)
+- Create new app at [https://dashboard.heroku.com/new-app](https://dashboard.heroku.com/new-app)
 
-* Make sure you are logged into the Heroku CLI: `heroku login`. If you have not installed the CLI, go to [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli) to install it.
+- Make sure you are logged into the Heroku CLI: `heroku login`. If you have not installed the CLI, go to [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli) to install it.
 
-* Add heroku remote to your Git repository: `heroku git:remote -a <app-name>`
+- Add the heroku remote to your Git repository: `heroku git:remote -a <app-name>`
 
-* Install psycopg2 in your Django app: `poetry add psycopg2`
+- Install psycopg2 in your Django app: `poetry add psycopg2`
 
-    * If you have an error saying PostgreSQL cannot be found, run `brew install postgresql`
+  - If you have an error saying PostgreSQL cannot be found, run `brew install postgresql`
 
-    * to convert your development environment to use PostgreSQL, see below
+  - to convert your development environment to use PostgreSQL, see below
 
-    * If you get an error that’s a big wall of text with `lssl` somewhere toward the bottom, run `brew info openssl` and then run the commands that it tells you to.
+  - If you get an error that’s a big wall of text with `lssl` somewhere toward the bottom, run `brew info openssl` and then run the commands that it tells you to.
 
-* Install django-heroku in your Django app: `poetry add django-heroku`
+- Install django-heroku in your Django app: `poetry add django-heroku`
 
-* Add django-heroku to your settings.py. At the bottom of settings.py, add
+- Add django-heroku to your settings.py. At the bottom of settings.py, add
 
 ```py
 # Configure Django App for Heroku.
@@ -25,18 +25,17 @@ django_heroku.settings(locals())
 del DATABASES['default']['OPTIONS']['sslmode']
 ```
 
-* Commit your code after adding django-heroku.
+- Commit your code after adding django-heroku.
 
-* Install gunicorn in your Django app: `poetry add gunicorn`.
+- Install gunicorn in your Django app: `poetry add gunicorn`.
 
-* Add a new file called Procfile:
+- Add a new file called Procfile:
 
 ```
 web: gunicorn <project_dir>.wsgi
 ```
 
-* Commit your code after adding gunicorn and a Procfile.
-
+- Commit your code after adding gunicorn and a Procfile.
 
 * Set up the Poetry buildpack for Heroku:
 
@@ -44,68 +43,33 @@ web: gunicorn <project_dir>.wsgi
 heroku buildpacks:clear
 heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
 heroku buildpacks:add heroku/python
+heroku addons:create heroku-postgresql:hobby-dev
 ```
 
-* Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
-* Make sure your version of Python in `pyproject.toml` is set to an exact version.
-* Push to Heroku: `git push heroku <your-git-branch>:master`. You will likely have a failure the first time. Debug.
+- Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
+- Make sure your version of Python in `pyproject.toml` is set to an exact version.
+- Push to Heroku: `git push heroku <your-git-branch>:master`. You will likely have a failure the first time. Debug. Your Git branch is probably `main`.
 
-* Run migrations on Heroku: `heroku run python3 manage.py migrate`
+- Run migrations on Heroku: `heroku run python3 manage.py migrate`
 
-* Create a superuser on Heroku: `heroku run python3 manage.py createsuperuser`
+- Create a superuser on Heroku: `heroku run python3 manage.py createsuperuser`
 
-* If not using our Django project template
-
-    * Update your settings.py to look in your environment variables for the SECRET_KEY:
-
-```py
-SECRET_KEY = os.getenv('SECRET_KEY', '<old-secret-key>')
-```
-
-
-* Commit your code and push to Heroku.
-
+- Commit your code and push to Heroku.
 
 * Once you are sure your app works, turn off DEBUG on Heroku.
 
-* *Only do the following if you are not using the project template*
-
-To turn off DEBUG, replace "DEBUG = True" in your settings.py with:
-
-```py
-in_production = bool(os.getenv('DEBUG'))
-DEBUG = not in_production
-```
-
-And then run `heroku config:set PRODUCTION=True`
-
 ## Converting your dev environment to use PostgreSQL
 
-* Install PostgreSQL: `brew install postgresql`
+- Install PostgreSQL: `brew install postgresql`
 
-* Start PostgreSQL: `brew services start postgresql`
+- Start PostgreSQL: `brew services start postgresql`
 
-* Create a DB user (usually, you should use the same name as your app): `createuser -d <username>`
+- Create a DB user (usually, you should use the same name as your app): `createuser -d <username>`
 
-* Create a database (usually, the same name as your app): `createdb -U <username> <dbname>`
+- Create a database (usually, the same name as your app): `createdb -U <username> <dbname>`
 
-* If using project template, add the following to .env:
+- Add the following to .env:
 
 ```
 DATABASE_URL=postgres://<username>:@127.0.0.1:5432/<dbname>
 ```
-
-* Else, update DATABASES in your settings.py to look like this:
-
-```
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '<dbname>',
-        'USER': '<username>',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-```
-
