@@ -16,11 +16,11 @@ Before anything else, update your operating system. To do that, go to the **Appl
 
 Open **System Preferences > Security & Privacy** and set the following:
 
-- Under General, set *require a password after sleep or screen saver begins to immediately*.
-- Under General, set *disable automatic login*.
-- Click Advanced… and select *Require an administrator password to access system-wide preferences*.
-- Under Firewall, click *Turn Firewall On*.
-- Under FileVault, enable *FileVault*. This will encrypt your disk. Without it, anyone with a bootable USB drive can get full access to your computer.
+- Under General, set _require a password after sleep or screen saver begins to immediately_.
+- Under General, set _disable automatic login_.
+- Click Advanced… and select _Require an administrator password to access system-wide preferences_.
+- Under Firewall, click _Turn Firewall On_.
+- Under FileVault, enable _FileVault_. This will encrypt your disk. Without it, anyone with a bootable USB drive can get full access to your computer.
 
 ## iTerm2
 
@@ -189,20 +189,20 @@ The exact versions may be different; ensure Node is v13 and above and npm is v6 
 
 ## Python
 
-Python has two different major versions, Python 2 and Python 3. We will use Python 3 throughout this course. While Python 3 is widely used, Python 2 is the default still on OS X, so we will have to install Python 3, as well as a tool we will use throughout the course to manage Python projects, poetry. To install these, run:
+Python has two different major versions, Python 2 and Python 3. We will use Python 3 throughout this course. While Python 3 is widely used, Python 2 is the default still on OS X, so we will have to install Python 3, as well as a tool we will use throughout the course to manage Python projects, pipenv. To install these, run:
 
 ```
-$ brew install python3 poetry
+$ brew install python3 pipenv
 ```
 
 Once this is done, you should be able to run the following commands and get output like this:
 
 ```
 $ python3 --version
-Python 3.7.7
+Python 3.8.5
 
-$ poetry --version
-Poetry version 1.0.5
+$ pipenv --version
+pipenv, version 2020.6.2
 ```
 
 ## Visual Studio Code
