@@ -56,7 +56,7 @@ The first line will prompt you to read the license and agree to it. It will ask 
 To install Homebrew, paste the following command in your terminal, hit Enter, and follow the steps on the screen:
 
 ```
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 To be able to use Homebrew you need to start a new terminal session. Do this by opening a new terminal tab with Cmd+T (you should also close the old one), then run the following command to make sure everything is working:
