@@ -11,8 +11,8 @@ To transfer a single repo, follow these steps:
 	- Do NOT initialize the repo with a README.md (you will want to create README for your projects, but not at this step).
 3. Copy the url that is shown after you create the repo.
 4. In the terminal on your computer, go to the local project repo containing the code that you want to put in this newly created repo on GitHub.
-5. Run: `git remote set-url origin <your-GitHub-repo-url-that-you-just-copied>`
-    - (GitHub documentation on this)
+5. Run  `git remote set-url origin <your-GitHub-repo-url-that-you-just-copied>`
+    - [GitHub documentation: changing a remote's URL](https://help.github.com/en/github/using-git/changing-a-remotes-url)
 6. Run `git remote -v`  to see that the remote url was changed successfully. It should be labeled `origin` and match the url of the repo you created on GitHub.
 7. Run `git push origin master` (or `main`, if that is your default branch name) to push your existing repo to that remote url.
 8. Go to GitHub and refresh the page of the repo you created to see your code. You can continue to work in this repo, committing and pushing as usual.
