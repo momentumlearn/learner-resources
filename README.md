@@ -6,25 +6,33 @@ We encourage your contributions to this repository as a student!
 
 ## Contents
 
-- Meta
-  - [How do I contribute to this knowledge base?](articles/contributing.md)
+### Meta
 
-- Getting ready for class
-  - [Getting ready without Foundations](articles/getting-ready.md)
-  - [How to set up your computer](articles/setup.md)
-  - [How we work remotely](articles/working-remotely.md)
+- [How do I contribute to this knowledge base?](articles/contributing.md)
 
-- JavaScript
-  - [What is `this`?](articles/this-js.md)
+### Getting ready for class
 
-- Python
-  - [What does `if __name__ == "__main__"` do?](articles/pymain.md)
+- [Getting ready without Foundations](articles/getting-ready.md)
+- [How to set up your computer](articles/setup.md)
+- [How we work remotely](articles/working-remotely.md)
+- [Student Guidelines](articles/student-guidelines.md)
 
-- Django
-  - [Checklist for deploying a Django app to Heroku](articles/deploy-django-to-heroku.md)
+### JavaScript
 
-- Git & GitHub
-  - [Moving your assignment repos to your own GitHub account](articles/moving-your-repos.md)
+- [What is `this`?](articles/this-js.md)
 
-- Resources
-  - [What coding podcasts should I check out?](articles/podcasts.md)
+### Python
+
+- [What does `if __name__ == "__main__"` do?](articles/pymain.md)
+
+### Django
+
+- [Checklist for deploying a Django app to Heroku](articles/deploy-django-to-heroku.md)
+
+### Git & GitHub
+
+- [Moving your assignment repos to your own GitHub account](articles/moving-your-repos.md)
+
+### Resources
+
+- [What coding podcasts should I check out?](articles/podcasts.md)
