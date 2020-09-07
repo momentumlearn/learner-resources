@@ -107,10 +107,11 @@ If you do not yet have a [GitHub](https://github.com/) account, go there and reg
 $ brew install git
 ```
 
-When done, to test that it installed correctly, you can run:
+When done, to test that it installed correctly, you can run and and expect output like this:
 
 ```
 $ git --version
+git version 2.28.0
 ```
 
 And `which git` should output `/usr/local/bin/git`.
@@ -130,7 +131,7 @@ To push code to your GitHub repositories, we’re going to use the recommended H
 $ git config --global credential.helper osxkeychain
 ```
 
-Lastly, you want to make sure git uses a text editor that is easier for you to use than the default one. Type the following command:
+Lastly, you want to make sure git uses a text editor that is easier for you to use than the default one. Type the following command to configure git to set nano as the default editor:
 
 ```
 $ git config --global core.editor nano
@@ -189,20 +190,20 @@ The exact versions may be different; ensure Node is v13 and above and npm is v6 
 
 ## Python
 
-Python has two different major versions, Python 2 and Python 3. We will use Python 3 throughout this course. While Python 3 is widely used, Python 2 is the default still on OS X, so we will have to install Python 3, as well as a tool we will use throughout the course to manage Python projects, poetry. To install these, run:
+Python has two different major versions, Python 2 and Python 3. We will use Python 3 throughout this course. While Python 3 is widely used, Python 2 is the default still on OS X, so we will have to install Python 3, as well as a tool we will use throughout the course to manage Python projects, pipenv. To install these, run:
 
 ```
-$ brew install python3 poetry
+$ brew install python3 pipenv
 ```
 
 Once this is done, you should be able to run the following commands and get output like this:
 
 ```
 $ python3 --version
-Python 3.7.7
+Python 3.8.5
 
-$ poetry --version
-Poetry version 1.0.5
+$ pipenv --version
+pipenv, version 2020.8.13
 ```
 
 ## Visual Studio Code
