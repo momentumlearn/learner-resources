@@ -10,6 +10,11 @@ We encourage your contributions to this repository as a student!
 
 - [How do I contribute to this knowledge base?](articles/contributing.md)
 
+### How To
+
+- [How to fix the missing symbols in the command line prompt](articles/terminal-font.md)
+- [How to set up your computer](articles/setup.md)
+
 ### Getting ready for class
 
 - [Getting ready without Foundations](articles/getting-ready.md)
