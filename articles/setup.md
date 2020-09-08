@@ -16,11 +16,11 @@ Before anything else, update your operating system. To do that, go to the **Appl
 
 Open **System Preferences > Security & Privacy** and set the following:
 
-- Under General, set *require a password after sleep or screen saver begins to immediately*.
-- Under General, set *disable automatic login*.
-- Click Advanced… and select *Require an administrator password to access system-wide preferences*.
-- Under Firewall, click *Turn Firewall On*.
-- Under FileVault, enable *FileVault*. This will encrypt your disk. Without it, anyone with a bootable USB drive can get full access to your computer.
+- Under General, set _require a password after sleep or screen saver begins to immediately_.
+- Under General, set _disable automatic login_.
+- Click Advanced… and select _Require an administrator password to access system-wide preferences_.
+- Under Firewall, click _Turn Firewall On_.
+- Under FileVault, enable _FileVault_. This will encrypt your disk. Without it, anyone with a bootable USB drive can get full access to your computer.
 
 ## iTerm2
 
