@@ -37,7 +37,7 @@ web: gunicorn <project_dir>.wsgi
 
 - Commit your code after adding gunicorn and a Procfile.
 - Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
-- Push to Heroku: `git push heroku <your-git-branch>:master`. You will likely have a failure the first time. Debug. Your Git branch is probably `main`.
+- Push to Heroku: `git push heroku main`.
 
 - Run migrations on Heroku: `heroku run python3 manage.py migrate`
 
