@@ -43,8 +43,6 @@ web: gunicorn <project_dir>.wsgi
 
 - Create a superuser on Heroku: `heroku run python3 manage.py createsuperuser`
 
-- Commit your code and push to Heroku.
-
 * Once you are sure your app works, turn off DEBUG on Heroku.
 
 ## Converting your dev environment to use PostgreSQL
