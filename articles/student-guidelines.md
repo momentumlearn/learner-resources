@@ -1,4 +1,4 @@
-# Momentum Student Guidelnes
+# Momentum Student Guidelines
 
 We will spend a lot of time together over the course of the next sixteen weeks. We’ve got a lot of work to do! You’ll be introduced to a lot of new concepts, you’ll write (and read) a lot of code, you’ll learn to use the tools of the trade, and you’ll begin to establish the habits and practices of a professional developer.
 
