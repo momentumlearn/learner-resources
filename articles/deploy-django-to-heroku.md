@@ -2,6 +2,8 @@
 
 - Create new app at [https://dashboard.heroku.com/new-app](https://dashboard.heroku.com/new-app)
 
+- In your new app on the Heroku website, click "Resources." Click the text box under "Addons." Type "postgres" in the box and choose "Heroku Postgres." Add the hobby plan.
+
 - Make sure you are logged into the Heroku CLI: `heroku login`. If you have not installed the CLI, go to [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli) to install it.
 
 - Add the heroku remote to your Git repository: `heroku git:remote -a <app-name>`
