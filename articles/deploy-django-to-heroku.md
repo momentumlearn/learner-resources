@@ -25,17 +25,15 @@ django_heroku.settings(locals())
 del DATABASES['default']['OPTIONS']['sslmode']
 ```
 
-- Commit your code after adding django-heroku.
-
 - Install gunicorn in your Django app: `pipenv install gunicorn`.
 
-- Add a new file called Procfile:
+- Add a new file called `Procfile` with the below contents (replace `<project_dir>` with your project directory, probably `project`):
 
 ```
 web: gunicorn <project_dir>.wsgi
 ```
 
-- Commit your code after adding gunicorn and a Procfile.
+- Commit your code.
 - Set a secret key just for Heroku: `heroku config:set SECRET_KEY=$(date | md5)`
 - Push to Heroku: `git push heroku main`.
 
