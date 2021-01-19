@@ -8,7 +8,7 @@
 
 - Add the heroku remote to your Git repository: `heroku git:remote -a <app-name>`
 
-- Install psycopg2 in your Django app: `pipenv install psycopg2`
+- Install psycopg2 in your Django app: `pipenv install psycopg2-binary`
 
   - If you have an error saying PostgreSQL cannot be found, run `brew install postgresql`
 
@@ -16,15 +16,14 @@
 
   - If you get an error that’s a big wall of text with `lssl` somewhere toward the bottom, run `brew info openssl` and then run the commands that it tells you to.
 
-- Install django-heroku in your Django app: `pipenv install django-heroku`
+- Install [django-on-heroku](https://pypi.org/project/django-on-heroku/) in your Django app: `pipenv install django-on-heroku`
 
 - Add django-heroku to your settings.py. At the bottom of settings.py, add
 
 ```py
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
+import django_on_heroku
+django_on_heroku.settings(locals())
 ```
 
 - Install gunicorn in your Django app: `pipenv install gunicorn`.
