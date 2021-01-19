@@ -18,7 +18,7 @@
 
 - Install [django-on-heroku](https://pypi.org/project/django-on-heroku/) in your Django app: `pipenv install django-on-heroku`
 
-- Add django-heroku to your settings.py. At the bottom of settings.py, add
+- Add django-on-heroku to your settings.py. At the bottom of settings.py, add
 
 ```py
 # Configure Django App for Heroku.
