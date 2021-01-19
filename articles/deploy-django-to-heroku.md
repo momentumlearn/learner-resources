@@ -24,6 +24,7 @@
 # Configure Django App for Heroku.
 import django_on_heroku
 django_on_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']
 ```
 
 - Install gunicorn in your Django app: `pipenv install gunicorn`.
