@@ -8,6 +8,8 @@
 
 - Add the heroku remote to your Git repository: `heroku git:remote -a <app-name>`
 
+- **If your application is in a subdirectory, follow the directions under "If your application is in a subdirectory" below before doing anything else.**
+
 - Install psycopg2 in your Django app: `pipenv install psycopg2-binary`
 
   - If you have an error saying PostgreSQL cannot be found, run `brew install postgresql`
