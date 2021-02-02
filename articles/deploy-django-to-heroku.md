@@ -43,7 +43,18 @@ web: gunicorn <project_dir>.wsgi
 
 - Create a superuser on Heroku: `heroku run python3 manage.py createsuperuser`
 
-* Once you are sure your app works, turn off DEBUG on Heroku.
+## If your application is in a subdirectory
+
+- Run the following:
+
+```
+heroku buildpacks:clear
+heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack
+heroku buildpacks:add heroku/python
+heroku config:set PROJECT_PATH=<subdir>
+```
+
+
 
 ## Converting your dev environment to use PostgreSQL
 
