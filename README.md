@@ -25,6 +25,7 @@ We encourage your contributions to this repository as a student!
 ### JavaScript
 
 - [What is `this`?](articles/this-js.md)
+- [Handling Fetch responses other than 200](articles/fetch-error-handling.md)
 
 ### Python
 
