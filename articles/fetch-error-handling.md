@@ -35,11 +35,11 @@ Because the fetch will not throw an Error if one of these status codes shows up 
 
 ```js
 fetch('http://httpstat.us/404')
-  .then((res) => {
-    if (!res.ok) {
-    throw new Error(res.statusText)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.statusText)
     }
-    return res.json() // this line won't run if we threw an error in the if block above
+    return response.json() // this line won't run if we threw an error in the if block above
   })
   .then(data => {
     // do stuff with data
