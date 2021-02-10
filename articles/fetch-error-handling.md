@@ -1,8 +1,8 @@
-# Fetch response outcomes other than 200 OK
+# Thinking through different Fetch response outcomes
 
-## What if I get no results back from my GET request for data?
+## What if I get a 200 response to a search request but there is no data?
 
-If you plan to show something like search results on a page, but no results are returned from a GET request, then you should handle that case in your code and update the UI to let your user know what's going on.
+If you plan to show something like search results on a page, but no results are returned to a GET request, then you should handle that case in your code and update the UI to let your user know what's going on.
 
 That could look something like a check to see if you have the results you want.
 
@@ -29,7 +29,7 @@ We want to write code for the "happy path" where we get precisely the response w
 
 Common responses like 404 (not found), 403 (forbidden), or 500 (internal server error) indicate that something went wrong, so we won't get the data we want. So what do we do about it?
 
-Maybe we want to track or log this in some way to alert us to the problem, but we definitely want to make sure the UI responds appropriately.
+Maybe we want to track or log this in some way to alert us to the problem, or retry the request, but we definitely want to make sure the UI responds appropriately.
 
 Because the fetch will not throw an Error if one of these status codes shows up in the response (as other libraries you might use do), we have to handle it ourselves. We have [an `ok` method](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) we can use on the response object. It will return `true` if the response falls in the successful 2xx range. What we do next is up to us, but one possible solution is to throw your own Error and use `catch` to handle it.
 
