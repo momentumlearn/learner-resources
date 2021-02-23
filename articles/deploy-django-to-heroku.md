@@ -68,7 +68,7 @@ heroku config:set PROJECT_PATH=<subdir>
 
 - Create a database (usually, the same name as your app): `createdb -U <username> <dbname>`
 
-- Add the following to .env:
+- Edit the DATABASE_URL key in the .env file to set it to the url for the postgres database. Make sure to remove the path to the sqlite database that is already there. Replace the values in the angle brackets with the values you set in the above steps:
 
 ```
 DATABASE_URL=postgres://<username>:@127.0.0.1:5432/<dbname>
