@@ -125,6 +125,12 @@ $ git config --global user.email "your_email@youremail.com"
 
 This data will get added to your `.gitconfig` file.
 
+We'll set the default branch name to `main` for any new repositories you make.
+
+```sh
+$ git config --global init.defaultBranch main
+```
+
 To push code to your GitHub repositories, we’re going to use the recommended HTTPS method. So you don’t have to type your username and password every time, enable Git password caching:
 
 ```
