@@ -219,6 +219,11 @@ pipenv, version 2020.8.13
 ```
 $ brew cask install visual-studio-code
 ```
+or
+
+```
+$ brew install --cask visual-studio-code
+```
 
 ## Google Chrome
 
@@ -226,4 +231,10 @@ Google Chrome is the browser we will use in class. To install it, run:
 
 ```
 $ brew cask install google-chrome
+```
+
+or
+
+```
+$ brew install --cask google-chrome
 ```
