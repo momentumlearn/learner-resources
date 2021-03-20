@@ -26,6 +26,7 @@ We encourage your contributions to this repository as a student!
 
 - [What is `this`?](articles/this-js.md)
 - [Handling Fetch responses when you don't get data back](articles/fetch-error-handling.md)
+- [JS You Need For React](articles/js-for-react.md) ⚡ _Even if you aren't using React, you can use these ES6 features!_
 
 ### Python
 
