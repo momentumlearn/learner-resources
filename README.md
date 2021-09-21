@@ -13,12 +13,12 @@ We encourage your contributions to this repository as a student!
 ### How To
 
 - [How to fix the missing symbols in the command line prompt](articles/terminal-font.md)
-- [How to set up your computer](articles/setup.md)
+- [How to set up your computer](https://www.notion.so/momentumlearn/Computer-Set-up-Instructions-42f17179ea9c4c769833cf9dc7890e20)
 
 ### Getting ready for class
 
 - [Getting ready without Foundations](articles/getting-ready.md)
-- [How to set up your computer](articles/setup.md)
+- [How to set up your computer](https://www.notion.so/momentumlearn/Computer-Set-up-Instructions-42f17179ea9c4c769833cf9dc7890e20)
 - [How we work remotely](articles/working-remotely.md)
 - [Student Guidelines](articles/student-guidelines.md)
 
