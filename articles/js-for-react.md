@@ -309,7 +309,13 @@ You can use the "default" syntax if you are exporting only ONE thing (like a fun
 
 ```js
 // in Menu.js
+// as an arrow function
 const Menu = () => <h1>Daily Specials</h1>
+
+// OR with the function keyword
+function Menu(){
+  return <h1>Daily Specials</h1>
+}
 
 // at the bottom of the Menu.js file
 export default Menu
@@ -318,11 +324,14 @@ export default Menu
 import Menu from ‘./components/Menu’
 ```
 
-You could also put the keywords right in front of the function or component you're exporting instead of at the bottom:
+You could also put the keywords right in front of the function or component you're exporting instead of at the bottom, but only with the function keyword:
 
 ```js
 // in Menu.js
-export default const Menu = () => <h1>Daily Specials</h1>
+// you can't do it this way with an arrow function!
+export default function Menu() {
+  return <h1>Daily Specials</h1>
+}
 
 // in another file, at the top
 import Menu from ‘./components/Menu’
