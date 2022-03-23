@@ -351,12 +351,26 @@ export const Venus = () => <h1>The Evening Star</h1>
 import { Mars, Venus } from './components/Planets'
 ```
 
-### `{}` ❓❓❓ OK, but when do I need the curly brackets around stuff I want to import and when do I not need them?
+You can also import only one component this way!
 
-**Are you importing a default export?** -> You do NOT need `{}` around the import name.
+```js
+import { Mars } from './components/Planets'
+```
 
-**Are you importing something that is not a default?** -> You DO need the `{}` around the import name.
+### `{}` ❓❓❓
 
-**How do I know if I am using a default or named export?** -> You have to go look at the file, or rely on the documentation if you are using a library.
+OK, but when do I need the curly brackets around stuff I want to import and when do I not need them? 😕
+
+#### Are you importing a **default export?**
+
+❌ You do NOT need `{}` around the import name.
+
+#### Are you importing something that is **not a default?**
+
+✅ You DO need the `{}` around the import name.
+
+#### How do I know if I am using a default or named export?
+
+You have to go look at the file, or rely on the documentation if you are using a library.
 
 ---
