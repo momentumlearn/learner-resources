@@ -293,6 +293,35 @@ function loadingMessage(isLoading) {
 
 ---
 
+## `map()`
+
+You'll use this all the time in React when you want to show lists of things. It's an array method that is useful when you have an array that you want to transform into a new array.
+
+This method takes an argument that is a function. Usually you'll see it as an arrow function, but it would work with the `function` keyword as well.
+
+`.map()` will loop through the array for you. Its function (the one you pass as an argument to `.map()`) will be called for each item in the array, using that item as an argument. The body of the function can use that argument to produce and return a new value. That value is added to a new array, which is returned by `.map()`, leaving the original array unchanged.
+
+![](img/js-map.png)
+
+```js
+[1, 2, 3].map(number => number * 2)
+// on the first iteration the function will run with 1 as the argument and return 2
+// on the second iteration the function will run with 2 as the argument and return 4
+// on the third iteration the function will run with 3 as the argument and return 6
+> [2, 4, 6]
+```
+
+It works with variables and other data types, too.
+
+```js
+const exclamations = ["hey", "whoa", "awesome"]
+const shouts = exclamations.map(word => word.toUpperCase() + "!")
+console.log(shouts)
+> ['HEY!', 'WHOA!', 'AWESOME!']
+```
+
+---
+
 ## ES6 Modules and Import/Export
 
 A module is JavaScript code organized into its own separate file and set up so that it can be easily included in other JavaScript files when we want to use it(and not included if we don't need it).
