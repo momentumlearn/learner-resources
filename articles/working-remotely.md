@@ -20,11 +20,15 @@ If you'll be away from your computer outside of lunch and short breaks, please l
 
 * If you would like a specific person's input, for example a classmate who has worked on the same issue or an instructor, you can **@ a person using their Slack handle**, like so: "@Amy, how do we get only certain objects from the database again?"
 
-* Reserve private messages for personal interactions.
+* Reserve private messages for personal interactions.e
+
+* People choose when they engage with Slack, so **nobody is ever bothering anyone by asking a question in Slack**. You will often be helping multiple classmates who share your question. You will in all likelihood be working at least partly remote as a developer, so Slack communication is an essential part of your training. 
 
 ### How to ask a technical question in Slack
 
-Asking precise questions about code is another skill that requires practice before it becomes familiar. It can be hard to find the right words, or even know what to ask. It’s ok not to get the phrasing right, and **it’s ok to ask about anything you are having trouble with**.
+Asking precise questions about code is another skill that requires practice before it becomes familiar. It can be hard to find the right words, or even know what to ask. It’s ok not to get the phrasing right, and **it’s ok to ask about anything you are having trouble with**, including "how do I start?" 
+
+When asking the question, remember that Slack is an asyncronous communication tool, so people may be responding when you are away and can't immediately provide additional information. Keep that in mind when you are framing your question, and provide as much context as possible. Don't let the fear of a question not being "perfect" prevent you from asking it and expect that you will get requests for clarification, which will help you develop the skill.
 
 * Describe the problem you are seeing as precisely as you can. Ask for what you need, whether it’s a clarification, a suggestion, a resource, help spotting an error...whatever.
 
